@@ -1,9 +1,6 @@
 {
   "name": "imroz",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.0.0"
-  },
   "private": true,
   "homepage": "http://imroz.rainbowit.net/",
   "basename": "/",
