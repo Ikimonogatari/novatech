@@ -12,6 +12,7 @@ import Particles from "react-tsparticles";
 import { slickDot, portfolioSlick2 } from "../page-demo/script";
 import Slider from "react-slick";
 import ModalVideo from "react-modal-video";
+import AboutThree from "../component/AboutThree";
 
 const SlideList = [
   {
@@ -24,16 +25,39 @@ const SlideList = [
 ];
 
 class DigitalAgency extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      isOpen: false,
+      isOpen1: false,
+      isOpen2: false,
+      isOpen3: false,
+      isOpen4: false,
+      isOpen5: false,
+      isOpen6: false,
+      isOpen7: false,
+      isOpen8: false,
+      isOpen9: false,
+      isOpen10: false,
+      isOpen11: false,
+      isOpen12: false,
     };
-    this.openModal = this.openModal.bind(this);
   }
-  openModal() {
-    this.setState({ isOpen: true });
-  }
+
+  openModal = (videoId, index) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      [`isOpen${index}`]: true,
+      videoId: videoId,
+    }));
+  };
+
+  closeModal = (index) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      [`isOpen${index}`]: false,
+      videoId: null,
+    }));
+  };
   render() {
     let title = "Nova Power Tech",
       description = "";
@@ -197,8 +221,10 @@ class DigitalAgency extends Component {
                 <div className="col-lg-5">
                   <div className="thumbnail">
                     <img
-                      className="w-100"
-                      src="/assets/about.jpg"
+                      className=""
+                      width={550}
+                      height={550}
+                      src="/assets/nova-about.jpg"
                       alt="About Images"
                     />
                   </div>
@@ -220,6 +246,261 @@ class DigitalAgency extends Component {
           </div>
         </div>
         {/* End About Area */}
+
+        {/* Start About Area */}
+        <div className="about-area ptb--120 bg_color--5" id="about">
+          <AboutThree />
+        </div>
+        {/* End About Area */}
+
+        {/* Start Video Area  */}
+        <div className="rn-section ptb--120 bg_color--1 line-separator">
+          <div className="container">
+            <div className="row mt_dec--30 sercice-details-content align-items-center">
+              <div className="col-lg-12">
+                <div className="thumb position-relative">
+                  {/* Healthcare Facilities */}
+                  <h3>Healthcare Facilities</h3>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/ymDSt-fgKUQ/maxresdefault.jpg`}
+                    alt="Healthcare Facilities"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen1}
+                    videoId="ymDSt-fgKUQ" // Healthcare Facilities video ID
+                    onClose={() => this.closeModal(1)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color"
+                    onClick={() => this.openModal("ymDSt-fgKUQ", 1)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Cement Industry Solutions */}
+                  <h4>Cement Industry Solutions</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/9rf-8uQ9Fp0/maxresdefault.jpg`}
+                    alt="Cement Industry Solutions"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen2}
+                    videoId="9rf-8uQ9Fp0" // Cement Industry Solutions video ID
+                    onClose={() => this.closeModal(2)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color"
+                    onClick={() => this.openModal("9rf-8uQ9Fp0", 2)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Mining Industry Solutions */}
+                  <h4>Mining Industry Solutions</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/xJpSrkzAsZU/maxresdefault.jpg`}
+                    alt="Mining Industry Solutions"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen3}
+                    videoId="xJpSrkzAsZU" // Mining Industry Solutions video ID
+                    onClose={() => this.closeModal(3)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color"
+                    onClick={() => this.openModal("xJpSrkzAsZU", 3)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Microgrid Solutions */}
+                  <h4>Microgrid Solutions</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/q6IFC7W1bNg/maxresdefault.jpg`}
+                    alt="Microgrid Solutions"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen4}
+                    videoId="q6IFC7W1bNg" // Microgrid Solutions video ID
+                    onClose={() => this.closeModal(4)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color"
+                    onClick={() => this.openModal("9rf-8uQ9Fp0", 4)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Video ID: C_0n4v6Sacw */}
+                  <h4>Clean Energy </h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/C_0n4v6Sacw/maxresdefault.jpg`}
+                    alt="Additional Video"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen10}
+                    videoId="C_0n4v6Sacw" // Video ID: C_0n4v6Sacw
+                    onClose={() => this.closeModal(10)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("C_0n4v6Sacw", 10)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Video ID: YkN09Ui3eX8 */}
+                  <h4>Microgrid Digital Control</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/YkN09Ui3eX8/maxresdefault.jpg`}
+                    alt="Additional Video"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen9}
+                    videoId="YkN09Ui3eX8" // Video ID: YkN09Ui3eX8
+                    onClose={() => this.closeModal(9)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("YkN09Ui3eX8", 9)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Water and Wastewater Solutions */}
+                  <h4>Water & Wastewater Solutions</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/aB5CQ9UMLaI/maxresdefault.jpg`}
+                    alt="Water and Wastewater Solutions"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen5}
+                    videoId="aB5CQ9UMLaI" // Water and Wastewater Solutions video ID
+                    onClose={() => this.closeModal(5)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("aB5CQ9UMLaI", 5)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Agriculture & Farming */}
+                  <h4>Powering the Digital Economy</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/TTtLdsvrcsI/maxresdefault.jpg`}
+                    alt="Agriculture & Farming"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen6}
+                    videoId="TTtLdsvrcsI" // Agriculture & Farming video ID
+                    onClose={() => this.closeModal(6)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("TTtLdsvrcsI", 6)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Additional Agriculture Video */}
+                  <h4>Sustainable Farming</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/1jh1qJu9_Zk/maxresdefault.jpg`}
+                    alt="Agriculture & Farming"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen7}
+                    videoId="1jh1qJu9_Zk" // Additional Agriculture video ID
+                    onClose={() => this.closeModal(7)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("1jh1qJu9_Zk", 7)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-12 mt--30">
+                <div className="thumb position-relative">
+                  {/* Another Agriculture Video */}
+                  <h4>EcoStruxure for Resillient Ops</h4>
+                  <img
+                    className="w-100"
+                    src={`https://img.youtube.com/vi/a5-cbWmaV2c/maxresdefault.jpg`}
+                    alt="Agriculture & Farming"
+                  />
+                  <ModalVideo
+                    channel="youtube"
+                    isOpen={this.state.isOpen8}
+                    videoId="a5-cbWmaV2c" // Another Agriculture video ID
+                    onClose={() => this.closeModal(8)}
+                  />
+                  <button
+                    className="video-popup position-top-center theme-color md-size"
+                    onClick={() => this.openModal("a5-cbWmaV2c", 8)}
+                  >
+                    <span className="play-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* End Video Area  */}
 
         {/* Start Offerings Area */}
         <div className="portfolio-area ptb--120 bg_color--1" id="portfolio">
@@ -272,245 +553,6 @@ class DigitalAgency extends Component {
           </div>
         </div>
         {/* End Offerings Area */}
-
-        {/* Start Video Area  */}
-        <div className="rn-section ptb--120 bg_color--1 line-separator">
-          <div className="container">
-            <div className="row mt_dec--30 sercice-details-content align-items-center">
-              <div className="col-lg-12">
-                <div className="thumb position-relative">
-                  {/* Healthcare Facilities */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/ymDSt-fgKUQ/maxresdefault.jpg`}
-                    alt="Healthcare Facilities"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="ymDSt-fgKUQ" // Healthcare Facilities video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Cement Industry Solutions */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/9rf-8uQ9Fp0/maxresdefault.jpg`}
-                    alt="Cement Industry Solutions"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="9rf-8uQ9Fp0" // Cement Industry Solutions video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Mining Industry Solutions */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/xJpSrkzAsZU/maxresdefault.jpg`}
-                    alt="Mining Industry Solutions"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="xJpSrkzAsZU" // Mining Industry Solutions video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Microgrid Solutions */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/q6IFC7W1bNg/maxresdefault.jpg`}
-                    alt="Microgrid Solutions"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="q6IFC7W1bNg" // Microgrid Solutions video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Water and Wastewater Solutions */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/aB5CQ9UMLaI/maxresdefault.jpg`}
-                    alt="Water and Wastewater Solutions"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="aB5CQ9UMLaI" // Water and Wastewater Solutions video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Agriculture & Farming */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/TTtLdsvrcsI/maxresdefault.jpg`}
-                    alt="Agriculture & Farming"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="TTtLdsvrcsI" // Agriculture & Farming video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Additional Agriculture Video */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/1jh1qJu9_Zk/maxresdefault.jpg`}
-                    alt="Agriculture & Farming"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="1jh1qJu9_Zk" // Additional Agriculture video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Another Agriculture Video */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/a5-cbWmaV2c/maxresdefault.jpg`}
-                    alt="Agriculture & Farming"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="a5-cbWmaV2c" // Another Agriculture video ID
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Video ID: YkN09Ui3eX8 */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/YkN09Ui3eX8/maxresdefault.jpg`}
-                    alt="Additional Video"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="YkN09Ui3eX8" // Video ID: YkN09Ui3eX8
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-12 mt--30">
-                <div className="thumb position-relative">
-                  {/* Video ID: C_0n4v6Sacw */}
-                  <img
-                    className="w-100"
-                    src={`https://img.youtube.com/vi/C_0n4v6Sacw/maxresdefault.jpg`}
-                    alt="Additional Video"
-                  />
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={this.state.isOpen}
-                    videoId="C_0n4v6Sacw" // Video ID: C_0n4v6Sacw
-                    onClose={() => this.setState({ isOpen: false })}
-                  />
-                  <button
-                    className="video-popup position-top-center theme-color md-size"
-                    onClick={this.openModal}
-                  >
-                    <span className="play-icon"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* End Video Area  */}
 
         {/* Start Portfolio Area */}
         <div className="portfolio-area ptb--120 bg_image bg_image--3">

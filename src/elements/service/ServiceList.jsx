@@ -20,7 +20,7 @@ const ServiceList = [
     icon: <FiLayers />,
     title: "Automation",
     description:
-      "Cutting-edge technology for industrial, household, and office automation, making spaces smarter and more efficient",
+      "Cutting-edge technology for industrial, household, and office automation, making spaces smarter and more efficient.",
   },
   {
     icon: <FiBatteryCharging />,

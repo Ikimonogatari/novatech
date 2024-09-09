@@ -34,30 +34,15 @@ class Header extends Component {
 
     const { logo, color = "default-color" } = this.props;
     let logoUrl;
-    if (logo === "light") {
-      logoUrl = (
-        <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
-      );
-    } else if (logo === "dark") {
-      logoUrl = (
-        <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
-      );
-    } else if (logo === "symbol-dark") {
+    if (logo === "dark") {
       logoUrl = (
         <img
-          src="/assets/images/logo/logo-symbol-dark.png"
+          width={240}
+          height={60}
+          src="/assets/images/logo/logo-dark.png"
           alt="Digital Agency"
         />
       );
-    } else if (logo === "symbol-light") {
-      logoUrl = (
-        <img
-          src="/assets/images/logo/logo-symbol-light.png"
-          alt="Digital Agency"
-        />
-      );
-    } else {
-      logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
     }
 
     return (
@@ -65,11 +50,13 @@ class Header extends Component {
         className={`header-area header--fixed formobile-menu header--transparent ${color}`}
       >
         <div className="header-wrapper" id="header-wrapper">
-          <div className="header-left">
+          <div className="header-left"></div>
+          <div className="header-right">
             <div className="logo">
               <a href="/">{logoUrl}</a>
             </div>
           </div>
+
           {/* <div className="header-right">
             <nav className="mainmenunav d-lg-block">
               <ul className="mainmenu">
