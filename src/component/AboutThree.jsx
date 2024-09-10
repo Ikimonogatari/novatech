@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class AboutThree extends Component {
   render() {
-    let title = "Why Choose Us",
+    let title = "Our Partnership",
       text1 =
         "Schneider Electric is a big name in energy management and automation, known for its focus on sustainability and innovation. This partnership allows us to offer a range of smart and green solutions that boost efficiency, sustainability, and connectivity. Here’s a quick rundown:",
       text2 =
@@ -105,15 +105,11 @@ class AboutThree extends Component {
               </div>
               <div className="col-lg-5 col-md-12">
                 <div className="thumbnail">
-                  <img
-                    className="w-100"
-                    src="/assets/images/about/about-1.png"
-                    alt="About Images"
-                  />
+                  <img className="w-100" src="/assets/schneider.png" alt="" />
                   <img
                     className="w-100 ml--50 mt--30"
-                    src="/assets/images/about/about-1.png"
-                    alt="About Images"
+                    src="/assets/himel.jpg"
+                    alt=""
                   />
                 </div>
               </div>

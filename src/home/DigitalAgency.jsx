@@ -611,34 +611,28 @@ class DigitalAgency extends Component {
 export default DigitalAgency;
 
 const Portfolio_image = (
-  <img src="/assets/1.jpg" alt="" width={320} height={320} />
+  <img src="/assets/1.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image2 = (
-  <img src="/assets/2.jpg" alt="" width={320} height={320} />
+  <img src="/assets/2.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image3 = (
-  <img src="/assets/3.jpg" alt="" width={320} height={320} />
+  <img src="/assets/3.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image4 = (
-  <img src="/assets/4.jpg" alt="" width={320} height={320} />
+  <img src="/assets/4.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image5 = (
-  <img src="/assets/5.jpg" alt="" width={320} height={320} />
+  <img src="/assets/5.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image6 = (
-  <img src="/assets/6.jpg" alt="" width={320} height={320} />
+  <img src="/assets/6.jpeg" alt="" width={320} height={320} />
 );
 const Portfolio_image7 = (
-  <img src="/assets/7.jpg" alt="" width={320} height={320} />
+  <img src="/assets/7.jpeg" alt="" width={320} height={320} />
 );
-const Portfolio_image9 = (
-  <img src="/assets/9.jpg" alt="" width={320} height={320} />
-);
-const Portfolio_image10 = (
-  <img src="/assets/10.jpg" alt="" width={320} height={320} />
-);
-const Portfolio_image11 = (
-  <img src="/assets/11.jpg" alt="" width={320} height={320} />
+const Portfolio_image8 = (
+  <img src="/assets/8.jpeg" alt="" width={320} height={320} />
 );
 
 const PortfolioList2 = [
@@ -679,12 +673,13 @@ const PortfolioList2 = [
       "Himel's MCBs provide superior protection against electrical overloads and short circuits, ensuring the safety of your electrical installations, whether in homes or commercial spaces.",
   },
   {
+    image: Portfolio_image7,
     title: "Residual Current Devices (RCDs)",
     description:
       "Protect your loved ones and colleagues from electric shocks with Himel’s RCDs—essential for the safety of modern smart homes and green buildings.",
   },
   {
-    image: Portfolio_image7,
+    image: Portfolio_image8,
     title: "Industrial Enclosures",
     description:
       "Built tough for industrial applications, Himel’s Industrial Enclosures offer unparalleled protection for your electrical equipment, enhancing safety and operational efficiency.",

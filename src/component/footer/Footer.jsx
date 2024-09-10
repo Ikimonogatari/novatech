@@ -10,7 +10,10 @@ import {
 const logoUrl = <img src="/assets/images/logo/logo-dark.png" alt="" />;
 
 const SocialShare = [
-  { Social: <FaFacebookF />, link: "https://www.facebook.com/" },
+  {
+    Social: <FaFacebookF />,
+    link: "https://www.facebook.com/profile.php?id=61558914520875",
+  },
   { Social: <FaLinkedinIn />, link: "https://www.linkedin.com/" },
   { Social: <FaInstagram />, link: "https://www.instagram.com/" },
   { Social: <FaTwitter />, link: "https://twitter.com/" },

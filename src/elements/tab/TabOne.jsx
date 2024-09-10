@@ -4,10 +4,10 @@ import { FiCheck } from "react-icons/fi";
 
 class TabsOne extends Component {
   render() {
-    let tab1 = "About us",
+    let tab1 = "About Us",
       tab2 = "Our Mission",
       tab3 = "Our Vision",
-      tab4 = "Our Partnership";
+      tab4 = "Why Choose Us";
     const { tabStyle } = this.props;
     var namesItemOne = [
       {
@@ -117,23 +117,8 @@ class TabsOne extends Component {
 
                   <TabPanel>
                     <div className="single-tab-content">
-                      <p>
-                        <b>
-                          NovaPowerTech Presents Schneider Electric: Your
-                          Partner in Smart, Sustainable Living and Industrial
-                          Efficiency
-                        </b>
-                      </p>
-                      <p>
-                        Schneider Electric is a big name in energy management
-                        and automation, known for its focus on sustainability
-                        and innovation. This partnership allows us to offer a
-                        range of smart and green solutions that boost
-                        efficiency, sustainability, and connectivity. Here’s a
-                        quick rundown:
-                      </p>
                       <ul className="list-style--1">
-                        {namesItemOne.map((n, index) => {
+                        {/* {namesItemOne.map((n, index) => {
                           return (
                             <li key={index}>
                               <FiCheck /> <b>{n.title}</b> <br></br>{" "}
@@ -142,23 +127,28 @@ class TabsOne extends Component {
                               <span>Example: {n.example}</span>
                             </li>
                           );
-                        })}
+                        })} */}
+                        <li>
+                          {" "}
+                          <FiCheck /> A team of internationally certified
+                          engineers and IT programmers, blending expertise with
+                          creativity to push the boundaries of innovation.
+                        </li>
+
+                        <li>
+                          {" "}
+                          <FiCheck /> Partnerships with the world’s leading
+                          energy product suppliers and a local network of 100+
+                          solution providers, fostering collaboration and the
+                          exchange of ideas.
+                        </li>
+                        <li>
+                          {" "}
+                          <FiCheck /> Experience the future of energy at our
+                          Green Mongolia Hub – energy testing center—a sandbox
+                          for innovative ideas and sustainable practices.
+                        </li>
                       </ul>
-                      <p>
-                        <b>
-                          NovaPowerTech Presents Himel: an award-winning
-                          manufacturer and supplier of a wide range of
-                          electrical products.{" "}
-                        </b>
-                      </p>
-                      <p>
-                        At NovaPowerTech, we are thrilled to introduce Himel, a
-                        globally recognized leader in electrical solutions, to
-                        the Mongolian market. As Mongolia embarks on its journey
-                        toward a greener, smarter, and more sustainable future,
-                        Himel is here to support with innovative products that
-                        blend efficiency with affordability.
-                      </p>
                     </div>
                   </TabPanel>
                 </Tabs>
