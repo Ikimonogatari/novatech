@@ -50,13 +50,21 @@ class Header extends Component {
         className={`header-area header--fixed formobile-menu header--transparent ${color}`}
       >
         <div className="header-wrapper" id="header-wrapper">
-          <div className="header-left"></div>
-          <div className="header-right">
+          <div className="header-left">
             <div className="logo">
               <a href="/">{logoUrl}</a>
             </div>
           </div>
-
+          <div className="header-right">
+            <a href="/">
+              <img
+                className="mt--20"
+                height={40}
+                src="/assets/logo-right.png"
+                alt="Digital Agency"
+              />
+            </a>
+          </div>
           {/* <div className="header-right">
             <nav className="mainmenunav d-lg-block">
               <ul className="mainmenu">
